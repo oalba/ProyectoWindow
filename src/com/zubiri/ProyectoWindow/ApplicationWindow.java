@@ -9,6 +9,7 @@ import javax.swing.JButton;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Color;
 
 public class ApplicationWindow {
 
@@ -43,13 +44,14 @@ public class ApplicationWindow {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.GRAY);
 		frame.setTitle("Nombres Application Window");
-		frame.setBounds(100, 100, 276, 110);
+		frame.setBounds(100, 100, 225, 110);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(78, 12, 184, 19);
+		textField.setBounds(78, 12, 133, 19);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
@@ -58,6 +60,7 @@ public class ApplicationWindow {
 		frame.getContentPane().add(lblNombre);
 		
 		JButton btnOk = new JButton("OK");
+		btnOk.setBackground(Color.LIGHT_GRAY);
 		btnOk.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -65,10 +68,11 @@ public class ApplicationWindow {
 				System.out.println("Tu nombre es: "+nombre);
 			}
 		});
-		btnOk.setBounds(12, 43, 117, 25);
+		btnOk.setBounds(12, 43, 91, 25);
 		frame.getContentPane().add(btnOk);
 		
 		JButton btnCancel = new JButton("Cancel");
+		btnCancel.setBackground(Color.LIGHT_GRAY);
 		btnCancel.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -76,7 +80,7 @@ public class ApplicationWindow {
 				System.out.println("Operación cancelada.");
 			}
 		});
-		btnCancel.setBounds(145, 43, 117, 25);
+		btnCancel.setBounds(120, 43, 91, 25);
 		frame.getContentPane().add(btnCancel);
 	}
 }
