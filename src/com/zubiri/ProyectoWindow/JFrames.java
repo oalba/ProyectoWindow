@@ -65,6 +65,7 @@ public class JFrames extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				textField.setText("");
 				System.out.println("Operación cancelada.");
+				dispose();
 			}
 		});
 	

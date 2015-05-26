@@ -78,6 +78,7 @@ public class ApplicationWindow {
 			public void mouseClicked(MouseEvent e) {
 				textField.setText("");
 				System.out.println("Operación cancelada.");
+				frame.dispose();
 			}
 		});
 		btnCancel.setBounds(120, 43, 91, 25);
